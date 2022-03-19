@@ -6,19 +6,9 @@ async function generate() {
     const response = await fetchAdvice.json()
     mainTitle.innerHTML = `Advice # ${response.slip.id}`
     advice.innerHTML = response.slip.advice
+    gsap.from(".main-title", {duration: 1, x: 100});
+    gsap.from(".advice", {duration: 1, x: -50});
     console.log(response.slip)
-}
-
-const generate2 = () => {
-    const mainTitle = document.querySelector(".main-title")
-    const advice = document.querySelector(".advice")
-    fetch("https://api.adviceslip.com/advice")
-        .then(response => response.json())
-        .then(data => {
-            mainTitle.innerHTML = `Advice # ${data.slip.id}`
-            advice.innerHTML = data.slip.advice
-        })
-        console.log(2)
 }
 
 generate()

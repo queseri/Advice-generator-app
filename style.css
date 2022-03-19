@@ -156,3 +156,34 @@ body {
     max-width: 33.75rem;
     width: 100%;
 }
+
+/* screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+@media screen and (min-width: 36.25rem) {
+    .main-title {
+        font-size: 0.8125rem;
+        font-weight: 800;
+        letter-spacing: 4.09px;
+    }
+
+    .advice {       
+         font-size: 1.75rem;  
+    }
+
+    .divider {
+        background-image: url("./images/pattern-divider-desktop.svg");      
+    }
+    
+}
